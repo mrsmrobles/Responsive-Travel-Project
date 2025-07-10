@@ -2,48 +2,7 @@ body {
   font-family: "poppins";
   background-color: rgb(53, 45, 64);
 }
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul {
-  padding: 0;
-}
-li a {
-  text-decoration: none;
-  color: white;
-  opacity: 0.7;
-  margin: 0;
-  padding: 0;
-}
-footer {
-  color: white;
-  background-image: linear-gradient(
-      rgba(53, 45, 64, 0.8),
-      rgba(53, 45, 64, 0.8)
-    ),
-    url("../images/san-diego-city-skyline-sunset-picture-36749-53381.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right 30% top 20%;
-  padding: 100px 0;
-}
-footer p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  opacity: 0.9;
-}
-footer h3 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
-}
-section {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 header {
   background-image: linear-gradient(
       rgba(99, 85, 120, 0.4),
@@ -91,21 +50,100 @@ header a {
   display: inline-block;
   margin-top: 32px;
 }
+main {
+  background-color: white;
+}
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  opacity: 0.3;
+  color: #272044;
+  text-transform: uppercase;
+  margin: 0;
+}
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+main p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+footer {
+  color: white;
+  background-image: linear-gradient(
+      rgba(53, 45, 64, 0.8),
+      rgba(53, 45, 64, 0.8)
+    ),
+    url("../images/san-diego-city-skyline-sunset-picture-36749-53381.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 30% top 20%;
+}
+footer p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.9;
+}
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
-.grid-two {
+.grid {
   display: grid;
+  grid-gap: 64px;
+}
+.two-columns {
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
-.grid-three {
-  display: grid;
+.three-columns {
   grid-template-columns: 1fr 2fr 2fr;
-  grid-gap: 20px;
 }
-@media (max-width: 800px) {
+#balboa-park {
+  object-fit: cover;
+  object-position: left;
+  aspect-ratio: 1/1;
+  max-height: 500px;
+  max-width: 100%;
+}
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -121,5 +159,15 @@ header a {
   header a {
     margin-top: 12px;
     padding: 10px 14px;
+  }
+  section {
+    padding: 30px;
+  }
+  .two-columns {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
   }
 }
