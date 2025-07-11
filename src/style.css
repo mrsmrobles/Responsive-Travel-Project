@@ -142,8 +142,6 @@ li a {
 }
 .two-columns {
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
 }
 .three-columns {
   grid-template-columns: 1fr 1fr 1fr;
@@ -161,6 +159,10 @@ section.secondary {
   background-color: white;
   margin: 30px 0;
 }
+
+.card-header.grid {
+  grid-gap: 0;
+}
 .card-body {
   padding: 30px;
 }
@@ -168,7 +170,13 @@ section.secondary {
 .card-footer {
   padding: 0 30px 30px;
 }
-
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.instagram-embed {
+  margin: 30px 0;
+}
 .btn {
   display: block;
   color: white;
@@ -183,7 +191,7 @@ section.secondary {
   text-decoration: none;
 }
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 #balboa-park {
@@ -219,5 +227,11 @@ section.secondary {
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 32px;
+  }
+  .card-header img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16/9;
   }
 }
